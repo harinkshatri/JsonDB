@@ -1,0 +1,28 @@
+﻿[
+  {
+    "Id": 1,
+    "UserName": "harink",
+    "Password": "123hk123",
+    "FirstName": "Harin",
+    "MiddleName": "A.",
+    "SureName": "Kshatri",
+    "Qualification": "MCA",
+    "Address": "l.n.road, vadodara",
+    "Contact": "8866225676",
+    "Department": "IT",
+    "Email": "harinkshatri@gmail.com"
+  },
+ {
+    "Id": 2,
+    "UserName": "h",
+    "Password": "12",
+    "FirstName": "H",
+    "MiddleName": "A.",
+    "SureName": "Ksh",
+    "Qualification": "A",
+    "Address": ", vadodara",
+    "Contact": "886",
+    "Department": "IT",
+    "Email": "haritri@gmail.com"
+  }
+]

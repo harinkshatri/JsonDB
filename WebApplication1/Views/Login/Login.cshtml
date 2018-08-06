@@ -1,0 +1,40 @@
+﻿@model WebApplication1.Models.Login
+
+<h4>LoginSignupModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login" name="myForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p>
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </p>
+            <p>
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </p>
+            <p>
+                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="button" value="clear" class="btn" id="clear" onclick="clearfunction()" />
+            </p>
+</div>
+            @*<div class="form-group">
+                        
+            </div>*@
+
+    <script>
+        function clearfunction()
+        { 
+            document.forms["myForm"].submit(); 
+            document.forms["myForm"].reset();
+        };
+    </script>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

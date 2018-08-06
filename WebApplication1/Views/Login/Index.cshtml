@@ -1,0 +1,137 @@
+﻿@model IEnumerable<WebApplication1.Models.LoginSignupModel>
+
+<p>
+    <a asp-action="Adduser">Create New</a>
+    @*@Html.ActionLink("Add New User", "Adduser", new { /* id=item.PrimaryKey */ }) |*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MiddleName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SureName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Qualification)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model==null)
+        {
+            <tr>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                No-Data
+            </td>
+            <td>
+                | @Html.ActionLink("Add New User", "Adduser", new { /* id=item.PrimaryKey */ }) |
+
+            </td>
+        </tr>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MiddleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SureName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Qualification)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contact)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "UserEdit", new { @id=item.Id }) |
+                        @Html.ActionLink("Details", "UserDetails", new {  id=item.Id}) |
+                        @Html.ActionLink("Delete", "DeleteUser", new { id=item.Id })
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
